@@ -1,13 +1,14 @@
+from common.direction import Direction
 from enum import Enum
+from math import pi
 
 class Node():
     def __init__(self, pos):
         self.x, self.y = pos
-        self.state = NodeState.EMPTY
-        self.neighbours = []
+        self.direction = Direction.NORTH
 
     def __str__(self):
-        return f"Node({self.x}, {self.y}) state: {self.state}"
+        return f"Node({self.x}, {self.y})"
 
 class NodeState(Enum):
     EMPTY = 1
